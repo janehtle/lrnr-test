@@ -4,9 +4,12 @@
   "description": "The LRNR app uses the Perplexity API to generate custom quizzes based on user input. Originally built using jQuery and Go, this project is a full refactor into a Node.js and React stack.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"npm run preview --prefix client\" \"npm run start --prefix server\"",
-    "dev": "concurrently \"npm run dev --prefix client\" \"npm run dev --prefix server\""
+    "dev": "concurrently \"npm run dev --prefix client\" \"npm run dev --prefix server\"",
+    "start": "node server/server.js",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "test": "npm run cy:run",
+    "test:unit": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,5 +25,15 @@
   "dependencies": {
     "concurrently": "^9.2.1",
     "dotenv": "^17.2.3"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.28.5",
+    "@babel/preset-react": "^7.28.5",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "babel-jest": "^30.2.0",
+    "cypress": "^15.7.1",
+    "jest": "^30.2.0",
+    "jest-environment-jsdom": "^30.2.0"
   }
 }
