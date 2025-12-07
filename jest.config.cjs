@@ -6,7 +6,8 @@ module.exports = {
     },
     moduleFileExtensions: ['js', 'jsx'],
     moduleNameMapper: {
-        '\\.(css|scss|sass)$': '<rootDir>/test/styleMock.js'
+        '\\.(css|scss|sass)$': '<rootDir>/test/styleMock.js',
+        '\\.(jpg|jpeg|png|gif|svg)$': '<rootDir>/test/styleMock.js'
     }
 };
 
